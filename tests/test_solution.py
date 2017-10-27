@@ -1,5 +1,6 @@
-import solution
 import unittest
+from my_solution import Solution
+solution = Solution()
 
 
 class TestNakedTwins(unittest.TestCase):
