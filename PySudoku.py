@@ -1,15 +1,17 @@
-import sys, os, random, pygame
-sys.path.append(os.path.join("objects"))
-import SudokuSquare
-from GameResources import *
+import os
+import sys
+import pygame
+
+from objects import SudokuSquare
+from objects.GameResources import *
 
 digits = '123456789'
 rows = 'ABCDEFGHI'
 
 
 def play(values_list):
-    pygame.init()
 
+    pygame.init()
 
     size = width, height = 700, 700
     screen = pygame.display.set_mode(size)
