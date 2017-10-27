@@ -1,4 +1,3 @@
-# todo Update comments after removing self.values
 # Create Solution class
 
 
@@ -146,9 +145,8 @@ class Solution:
         :return: Solved values dictionary, or False if solution is not possible.
         """
         # First, reduce the puzzle using the previous function
-        solveable, values = self.reduce_puzzle(values)
-
-        if not solveable:
+        values = self.reduce_puzzle(values)
+        if values is False:
             return False  # Failed earlier
         if all(len(values[s]) == 1 for s in self.boxes):
             return values  # Solved! Return self.values
@@ -183,7 +181,7 @@ class Solution:
             # Ensuring the correct parameter type is passe
             raise TypeError("The values parameter must be of type dict.")
 
-        return True, values
+        return values
 
     def only_choice(self, values):
         """
@@ -242,6 +240,14 @@ class Solution:
                             values = self.assign_value(values, box, value)
 
         return values
+
+
+# Since I used class had to pull out methods and store in variables
+solution = Solution()
+naked_twins = solution.naked_twins
+solve = solution.solve
+assign_value = solution.assign_value
+
 
 
 if __name__ == '__main__':
