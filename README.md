@@ -7,10 +7,6 @@ A: Naked Twins are two boxes within a single unit, that are of length two, and a
 that meet all of that criteria we can find all instances of the Naked Twins. We can then use them for reducing
 the number of possible digits for the rest of the boxes in the unit.
 
-# Check for all instances of naked twins
-# For each unsolved unit of len 2
-# If peer of len 2 has equal contents
-
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
 A: Diagonal Sudoku requires that all boxes within two diagonal units contain only one instance of digits 1-9 per
